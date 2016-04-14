@@ -20,7 +20,7 @@ $(function() {
 
             var list = "";
             if(allQuestions) {
-                allQuestions.forEach( function(element, index) {
+                allQuestions.reverse().forEach( function(element, index) {
                     list += "<li>"+element.questions+"</li>"+
                         "<li>"+element.response+"</li>";
                 });
@@ -41,7 +41,7 @@ $(function() {
                 allQuestions.push(question);
 
                 var list = "";
-                allQuestions.forEach( function(element, index) {
+                allQuestions.reverse().forEach( function(element, index) {
                     list += "<li>"+element.questions+"</li>"+
                         "<li>"+element.response+"</li>";
                 });
