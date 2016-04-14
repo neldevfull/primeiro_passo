@@ -40,14 +40,15 @@ $(function() {
 
                 allQuestions.push(question);
 
-                var list = "";
-                allQuestions.reverse().forEach( function(element, index) {
-                    list += "<li>"+element.questions+"</li>"+
-                        "<li>"+element.response+"</li>";
-                });
+                var question = "<li>"+question.questions+"</li>";
+                var response = "<li>"+question.response+"</li>";
 
-                $("#displayQuestions").empty().append(list);
                 $("#question").val("");
+                $("#displayQuestions").append(question);
+
+                setTimeout(function() {
+                    $("#displayQuestions").append(response);
+                }, 4000);
 
                 localStorage.setItem("allQuestions", JSON.stringify(allQuestions));
             });
