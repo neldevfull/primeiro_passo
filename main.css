@@ -1,0 +1,101 @@
+* {
+    margin: 0 auto;
+}
+
+ul li {
+    list-style: none;
+}
+
+@font-face {
+  font-family: 'neuropol';
+  src: url('fonts/neuropol.ttf');
+}
+body {
+    font-family: sans-serif;
+}
+
+/* Header */
+.logotype-box {
+    font-family: 'neuropol';
+    float:left;
+    margin-bottom: 2em;
+}
+.logo-symbol {
+    width: 25%;
+    margin-left: 10em;
+}
+.logotype h1{
+    color: #474747;
+    font-size: 2em;
+    margin: -.5em 0 0 2em;
+}
+.logotype h2 {
+    color: #006600;
+    font-size: 1.2em;
+    margin: -.2em 0 0 5em;
+}
+.logotype h2 span:first-child {
+    color: #FA6300;
+}
+
+/* Menu */
+.menu {
+    font-size: 1em;
+    font-weight: bold;
+    float: right;
+    padding: 1em 3em 0 0;
+    cursor: pointer;
+}
+.menu ul li {
+    display: inline;
+    list-style: none;
+    padding: 0 .5em;
+    color: #383838;
+}
+/*.menu ul li:nth-child(odd) {
+    border-bottom: 1px solid #D33800;
+}*/
+.menu ul li:nth-child(even) {
+    color: #D33800;
+}
+
+.login {
+    float:right;
+    margin: 2em 3em 0 0;
+}
+
+.content {
+    padding: 1em 5em;
+}
+.title {
+    font-size: 2.5em;
+    border-bottom: 1px solid #B13A01;
+}
+.knowus p {
+    font-size: 1.5em;
+}
+
+.signup p {
+    width: 50%;
+    float: left;
+    padding-right: 5em;
+    font-size: 1.2em;
+    text-align: justify;
+    margin-top: 1.5em;
+}
+
+.form-signup {
+    width: 50%;
+    float: right;
+    margin-top: 1.5em;
+}
+
+/* Footer */
+footer {
+    margin-top: 5em;
+    background:#333;
+    color:#F2F2F2;
+    padding:20px 0;
+    text-align:center;
+}
+

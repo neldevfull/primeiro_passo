@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PrimeiroPasso Consultoria Online</title>
+    <meta charset=utf-8>
+    <meta name=description content="Consultoria online">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="jquery.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logotype-box">
+            <img src="img/symbol.png" alt="" class="logo-symbol">
+            <div class="logotype">
+                <h1>PrimeiroPasso</h1>
+                <h2>
+                    <span>Consultoria </span>
+                    <span>Online</span>
+                </h2>
+            </div>
+        </div>
+        <div class="menu">
+            <ul>
+                <li>Conheça-nos</li>
+                <li>|</li>
+                <li>Cadastre-se</li>
+                <li>|</li>
+                <li>Chat Online</li>
+                <li>|</li>
+                <li>Suporte</li>
+            </ul>
+        </div>
+        <div class="login form-group">
+            <label for="id_user">Usuário</label>
+            <input id="id_user" type="text" placeholder="Entre com seu Usuário"
+                style="margin-right: 1em; border-radius: 5px;">
+            <label id="id_pswd">Senha</label>
+            <input id="id_pswd" type="password" placeholder="Entre com sua Senha"
+                style="margin-right: 1em; border-radius: 5px;">
+            <button class="btn btn-success">Entrar</button>
+        </div>
+    </header>
+    <div>
+        <img src="img/banner1.jpg" alt="" style="width: 100%;">
+    </div>
+    <main class="container-fluid content" style="clear: both;">
+        <h1>Seja Bem vindo
+            <span style="display: inline;" id="userName"></span>
+        </h1>
+        <p>Entre com sua dúvida que nós vamos ajudar você</p>
+        <textarea id="question"
+            class="form-control" style="height: 200px;"></textarea>
+        <button class="btn btn-success" id="sendChat">Enviar</button>
+
+        <ul id="displayQuestions"></ul>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <p>Avenida Major Nicacio nº 1</p>
+        <p>(16) 3721-1234</p>
+    </footer>
+</body>
+</html>
