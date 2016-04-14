@@ -51,6 +51,12 @@ $(function() {
 
                 localStorage.setItem("allQuestions", JSON.stringify(allQuestions));
             });
+
+            $("#cleanHistorical").on("click", function() {
+                localStorage.removeItem("allQuestions");
+                $("#displayQuestions").empty().append("");
+            });
+
             break;
         default:
             break;

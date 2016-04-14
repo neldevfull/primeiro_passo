@@ -12,17 +12,25 @@
 </head>
 <body>
     <header>
-        <div class="logotype-box">
-            <img src="img/symbol.png" alt="" class="logo-symbol">
-            <div class="logotype">
-                <h1>PrimeiroPasso</h1>
-                <h2>
-                    <span>Consultoria </span>
-                    <span>Online</span>
-                </h2>
+        <div class="row logotype-box">
+            <div class="row">
+                <div class="col-md-12">
+                    <img src="img/symbol.png" alt="" class="logo-symbol">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="logotype">
+                        <h1>PrimeiroPasso</h1>
+                        <h2>
+                            <span>Consultoria </span>
+                            <span>Online</span>
+                        </h2>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="menu">
+        <div class="menu" style="padding-top: 4em;">
             <ul>
                 <li>Conheça-nos</li>
                 <li>|</li>
@@ -32,15 +40,6 @@
                 <li>|</li>
                 <li>Suporte</li>
             </ul>
-        </div>
-        <div class="login form-group">
-            <label for="id_user">Usuário</label>
-            <input id="id_user" type="text" placeholder="Entre com seu Usuário"
-                style="margin-right: 1em; border-radius: 5px;">
-            <label id="id_pswd">Senha</label>
-            <input id="id_pswd" type="password" placeholder="Entre com sua Senha"
-                style="margin-right: 1em; border-radius: 5px;">
-            <button class="btn btn-success">Entrar</button>
         </div>
     </header>
     <div>
@@ -61,6 +60,9 @@
     <footer>
         <p>Avenida Major Nicacio nº 1</p>
         <p>(16) 3721-1234</p>
+        <a id="cleanHistorical" style="color: #333333; cursor: pointer;">
+            Apagar Histórico
+        </a>
     </footer>
 </body>
 </html>
