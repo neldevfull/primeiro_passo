@@ -15,7 +15,7 @@ $(function() {
 
         case "chat.html":
             var userName = localStorage.getItem("fullname");
-            $("#userName").empty().append(userName);
+            $("#userName").empty().append(userName+"!");
 
             var initial = function() {
                 var allQuestions = JSON.parse(localStorage.getItem("allQuestions"));
@@ -26,10 +26,10 @@ $(function() {
                         var respond = i == 0 ? allQuestions[i].response :
                             allQuestions[i].respTwo;
 
-                        list += "<li>"+allQuestions[i].userName+"</li>"+
-                            "<li>"+allQuestions[i].questions+"</li>"+
-                            "<li>"+allQuestions[i].consultant+"</li>"+
-                            "<li>"+respond+"</li>";
+                        list += '<li style="color:blue; margin-top: 1.2em;">'+allQuestions[i].userName+':</li>'+
+                            '<li style="margin-bottom:1em;">'+allQuestions[i].questions+'</li>'+
+                            '<li style="color:red;">'+allQuestions[i].consultant+':</li>'+
+                            '<li>'+respond+'</li>';
                     }
                 }
 
@@ -39,14 +39,14 @@ $(function() {
             initial();
 
             $("#sendChat").on("click", function() {
-                var responseOne = "Olá "+userName+" nós estamos muito felizes em atendê-lo."+
-                    "O MEI estará dispensado de emitir nota fiscal para consumidor pessoa"+
+                var responseOne = "Olá "+userName+", nós estamos muito felizes em atendê-lo."+
+                    "O MEI estará dispensado de emitir nota fiscal para consumidor pessoa "+
                     "física, porém, estará obrigado à emissão quando o destinatário da "+
                     "mercadoria ou serviço for outra empresa, salvo quando esse destinatário "+
                     "for o emissor da nota fiscal de entrada.";
 
                 var responseTwo = userName+" tenha um bom dia e disponha do nosso serviço de "+
-                    "atendimento online através do nosso chat";
+                    "atendimento online através do nosso chat.";
 
                 var allQuestions = [];
                 var question = {
@@ -60,19 +60,23 @@ $(function() {
                 if(JSON.parse(localStorage.getItem("allQuestions")))
                     allQuestions = JSON.parse(localStorage.getItem("allQuestions"));
 
-                var quest = '<li style="color:blue">'+question.userName+'<li>'
+                var quest = '<li style="color:blue; margin-top: 1.2em;">'
+                    +question.userName+'<li style="margin-bottom:1em;">'
                     +question.questions+'</li></li>';
                 var res   = "";
 
                 if(allQuestions.length > 0)
-                    res = "<li>"+question.consultant+"</li><li>"+question.respTwo+"</li>";
+                    res = '<li style="color:red;">'+question.consultant+'</li><li>'+question.respTwo+'</li>';
                 else
-                    res = "<li>"+question.consultant+"</li><li>"+question.response+"</li>";
+                    res = '<li style="color:red;">'+question.consultant+'</li><li>'+question.response+'</li>';
+
+                var typing = '<li class="typing">Nossa consultora esta digitando...</li>'
 
                 $("#question").val("");
-                $("#displayQuestions").append(quest);
+                $("#displayQuestions").append(quest+typing);
 
                 setTimeout(function() {
+                    $(".typing").empty();
                     $("#displayQuestions").append(res);
                 }, 4000);
 
