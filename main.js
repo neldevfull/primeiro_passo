@@ -2,6 +2,16 @@ $(function() {
     var url = location.pathname.split("/");
     url     = url[url.length - 1];
 
+    $("#knowus").on("click", function(event) {
+        event.preventDefault();
+        $('html,body').animate({scrollTop: $(".knowus").offset().top},'slow');
+    });
+
+    $("#signup").on("click", function(event) {
+         event.preventDefault();
+        $('html,body').animate({scrollTop: $(".signup").offset().top},'slow');
+    });
+
     switch (url) {
         case "index.html":
             $("#register").on("click", function(event) {
